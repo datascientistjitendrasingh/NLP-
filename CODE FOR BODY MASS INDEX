@@ -1,0 +1,29 @@
+def calculate_bmi(weight_kg, height_cm):
+    """
+    Calculates the Body Mass Index (BMI) and returns the BMI category.
+    
+    Parameters:
+    weight_kg (float): Weight of the individual in kilograms.
+    height_cm (float): Height of the individual in centimeters.
+    
+    Returns:
+    str: A message indicating the BMI category.
+    """
+    height_m = height_cm / 100
+    bmi = weight_kg / (height_m ** 2)
+    
+    if bmi < 18.5:
+        return "Underweight"
+    elif 18.5 <= bmi < 25:
+        return "Normal weight"
+    elif 25 <= bmi < 30:
+        return "Overweight"
+    else:
+        return "Obesity"
+
+# Sample usage of the BMI function:
+if __name__ == "__main__":
+    weight = float(input("Enter your weight in kilograms: "))
+    height = float(input("Enter your height in centimeters: "))
+    bmi_category = calculate_bmi(weight, height)
+    print(f"Your BMI category is: {bmi_category}")
