@@ -1,3 +1,4 @@
+# CODE FOR FEVRE DETECTION        
 def check_for_fever(temperature_celsius):
     """
     Determines whether the input temperature is indicative of a fever.
