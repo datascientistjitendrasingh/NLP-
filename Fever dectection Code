@@ -1,0 +1,23 @@
+def check_for_fever(temperature_celsius):
+    """
+    Determines whether the input temperature is indicative of a fever.
+    
+    Parameters:
+    temperature_celsius (float): Body temperature in degrees Celsius.
+    
+    Returns:
+    str: A message indicating the presence of a fever or not.
+    """
+    # Fever threshold is set at 38.0 degrees Celsius.
+    fever_threshold = 38.0
+    
+    # Check if the temperature is equal to or above the threshold.
+    if temperature_celsius >= fever_threshold:
+        return "You may have a fever."
+    else:
+        return "You likely do not have a fever."
+
+# Demonstration of function usage:
+if __name__ == "__main__":
+    temperature_input = float(input("Enter your body temperature in Celsius: "))
+    print(check_for_fever(temperature_input))
